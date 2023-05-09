@@ -1,22 +1,29 @@
-#include <stdio.h>  
-   
-int main() {  
-    int a, b;  
-    printf("Please Enter Two different values\n");  
-    scanf("%d %d", &a, &b);  
-    
-    if(a > b) 
-    {
-        printf("%d is Largest\n", a);          
-    } 
-    else if (b > a)
-    { 
-        printf("%d is Largest\n", b);  
-    } 
-    else 
-    {
-	printf("Both are Equal\n");
-    }
-   
-    return 0;  
+
+  #include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	 int n, i;
+	 float num, lg;
+	 clrscr();
+	 printf("How many numbers?\n");
+	 scanf("%d",&n);
+	 printf("Enter number-1: ");
+	 scanf("%f", &num);
+	 lg = num;
+	 i=2;
+	 while(i<=n)
+	 {
+	  printf("Enter number-%d: ",i);
+	  scanf("%f", &num);
+	  if(num>lg)
+	  {
+	   lg = num;
+	  }
+	  i++;
+	 }
+	 printf("\nLargest = %0.2f", lg);
+	 getch();
+	 return(0);
 }
